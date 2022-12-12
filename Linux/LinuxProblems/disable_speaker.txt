@@ -1,0 +1,10 @@
+The best way is to disable the pcspkr driver, 
+that way you don't have to undo any hardware changes in the future. 
+Open up a terminal and enter the following:
+sudo modprobe -r pcspkr
+
+Then, if you want to avoid doing this every time after rebooting, 
+append the following line to your /etc/modprobe.d/blacklist file. 
+If it's not there, create it.
+
+blacklist pcspkr
